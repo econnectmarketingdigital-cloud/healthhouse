@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FiArrowLeft, FiTrendingUp, FiTarget, FiUsers, FiBarChart2, FiPercent } from 'react-icons/fi';
 import api from '../services/api';
@@ -9,8 +9,8 @@ const etapaLabels = {
   proposta: 'Proposta', documentacao: 'Documentação', fechado: 'Fechado', perdido: 'Perdido',
 };
 const etapaColors = {
-  novo: '#38BDF8', contato_feito: '#00F5A0', visita_agendada: '#FBBF24',
-  proposta: '#00F5A0', documentacao: '#818CF8', fechado: '#00F5A0', perdido: '#F43F5E',
+  novo: '#38BDF8', contato_feito: '#00C6FF', visita_agendada: '#FBBF24',
+  proposta: '#00C6FF', documentacao: '#818CF8', fechado: '#00C6FF', perdido: '#F43F5E',
 };
 const fmt = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v || 0);
 

@@ -1,9 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from '../../lib/utils';
 
 export const glassButtonVariants = cva(
-  'relative overflow-hidden cursor-pointer rounded-full transition-all duration-300 backdrop-blur-md border border-white/10 bg-white/5 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(0,245,160,0.3)] hover:border-[#00F5A0]/50 text-white font-medium flex items-center justify-center',
+  'relative overflow-hidden cursor-pointer rounded-full transition-all duration-300 backdrop-blur-md border border-white/10 bg-white/5 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(0,198,255,0.3)] hover:border-[#00C6FF]/50 text-white font-medium flex items-center justify-center',
   {
     variants: {
       size: {
@@ -14,7 +14,7 @@ export const glassButtonVariants = cva(
       },
       variant: {
         default: '',
-        primary: 'bg-[#00F5A0]/90 text-[#061912] font-bold hover:bg-[#00F5A0] border-[#00F5A0]/50 hover:shadow-[0_0_25px_rgba(0,245,160,0.6)]',
+        primary: 'bg-[#00C6FF]/90 text-[#061912] font-bold hover:bg-[#00C6FF] border-[#00C6FF]/50 hover:shadow-[0_0_25px_rgba(0,198,255,0.6)]',
       }
     },
     defaultVariants: {

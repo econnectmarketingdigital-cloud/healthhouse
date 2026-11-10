@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FiHome, FiCheckCircle, FiClock, FiXCircle, FiArrowLeft } from 'react-icons/fi';
 import api from '../services/api';
@@ -92,9 +92,9 @@ export default function EmpreendimentoDetail() {
             </p>
           </div>
           <span style={{ 
-            background: 'rgba(0, 245, 160, 0.15)', 
-            color: '#00F5A0', 
-            border: '1px solid rgba(0, 245, 160, 0.3)', 
+            background: 'rgba(0, 198, 255, 0.15)', 
+            color: '#00C6FF', 
+            border: '1px solid rgba(0, 198, 255, 0.3)', 
             padding: '6px 16px', 
             borderRadius: '20px', 
             fontSize: '0.85rem', 
@@ -112,11 +112,11 @@ export default function EmpreendimentoDetail() {
             </div>
             <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#FFFFFF' }}>{stats.total}</div>
           </div>
-          <div style={{ padding: '1rem', borderRadius: '12px', border: '1px solid rgba(0,245,160,0.3)', background: 'rgba(0,245,160,0.05)' }}>
-            <div style={{ fontSize: '0.7rem', color: '#00F5A0', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
+          <div style={{ padding: '1rem', borderRadius: '12px', border: '1px solid rgba(0,198,255,0.3)', background: 'rgba(0,198,255,0.05)' }}>
+            <div style={{ fontSize: '0.7rem', color: '#00C6FF', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
               <FiCheckCircle size={12} /> Disponíveis
             </div>
-            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#00F5A0' }}>{stats.disponivel}</div>
+            <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#00C6FF' }}>{stats.disponivel}</div>
           </div>
           <div style={{ padding: '1rem', borderRadius: '12px', border: '1px solid rgba(251,191,36,0.3)', background: 'rgba(251,191,36,0.05)' }}>
             <div style={{ fontSize: '0.7rem', color: '#FBBF24', textTransform: 'uppercase', letterSpacing: '1px', display: 'flex', alignItems: 'center', gap: '4px', marginBottom: '6px' }}>
@@ -161,8 +161,8 @@ export default function EmpreendimentoDetail() {
       {/* Lot Grid */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
         {filteredUnidades.map(unidade => {
-          const statusColor = unidade.status === 'disponivel' ? '#00F5A0' : unidade.status === 'reservado' ? '#FBBF24' : '#F43F5E';
-          const statusBg = unidade.status === 'disponivel' ? 'rgba(0,245,160,0.12)' : unidade.status === 'reservado' ? 'rgba(251,191,36,0.12)' : 'rgba(244,63,94,0.12)';
+          const statusColor = unidade.status === 'disponivel' ? '#00C6FF' : unidade.status === 'reservado' ? '#FBBF24' : '#F43F5E';
+          const statusBg = unidade.status === 'disponivel' ? 'rgba(0,198,255,0.12)' : unidade.status === 'reservado' ? 'rgba(251,191,36,0.12)' : 'rgba(244,63,94,0.12)';
           const statusLabel = unidade.status === 'disponivel' ? 'Disponível' : unidade.status === 'reservado' ? 'Reservado' : 'Vendido';
 
           return (
@@ -192,7 +192,7 @@ export default function EmpreendimentoDetail() {
                 {unidade.area_m2 > 0 && <div>Área: <span style={{ color: '#FFFFFF', fontWeight: 500 }}>{unidade.area_m2} m²</span></div>}
               </div>
               
-              <div style={{ fontWeight: 800, fontSize: '1.1rem', color: '#00F5A0' }}>
+              <div style={{ fontWeight: 800, fontSize: '1.1rem', color: '#00C6FF' }}>
                 {formatCurrency(unidade.valor)}
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useToast } from '../contexts/ToastContext';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
@@ -101,13 +101,13 @@ const GestorDashboard = () => {
         <div style={{
           background: 'rgba(14, 16, 20, 0.95)',
           backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(0, 245, 160, 0.3)',
+          border: '1px solid rgba(0, 198, 255, 0.3)',
           padding: '12px 16px',
           borderRadius: '12px',
           boxShadow: '0 10px 30px rgba(0,0,0,0.6)'
         }}>
           <p style={{ color: 'var(--color-text-secondary)', margin: '0 0 4px 0', fontSize: '0.85rem', fontWeight: 600 }}>{p.label || `Dia ${label}`}</p>
-          <p style={{ color: '#00F5A0', margin: 0, fontWeight: 800, fontSize: '1.25rem' }}>
+          <p style={{ color: '#00C6FF', margin: 0, fontWeight: 800, fontSize: '1.25rem' }}>
             {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(payload[0].value)}
           </p>
           {p.vendaDia > 0 && (
@@ -127,9 +127,9 @@ const GestorDashboard = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '10px' }}>
         <div>
           <h1 className="font-heading" style={{ fontSize: 'clamp(1.5rem, 6vw, 2.3rem)', margin: 0, fontWeight: 800, letterSpacing: '-0.5px' }}>
-            Visão Geral <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(90deg, #00F5A0, #0EA5E9)', WebkitBackgroundClip: 'text' }}>Gestão</span>
+            Visão Geral <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(90deg, #00C6FF, #0EA5E9)', WebkitBackgroundClip: 'text' }}>Gestão</span>
           </h1>
-          <p style={{ color: 'var(--color-text-secondary)', margin: '0.25rem 0 0 0', fontSize: '0.875rem' }}>Acompanhamento de performance e VGV de planos de sa�de da equipe.</p>
+          <p style={{ color: 'var(--color-text-secondary)', margin: '0.25rem 0 0 0', fontSize: '0.875rem' }}>Acompanhamento de performance e faturamento de planos de saúde da equipe.</p>
         </div>
       </div>
 
@@ -138,7 +138,7 @@ const GestorDashboard = () => {
         {/* VGV Total Card with Progress visual */}
         <div className="card">
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
-            <div style={{ backgroundColor: 'rgba(0, 245, 160, 0.12)', color: '#00F5A0', padding: '0.6rem', borderRadius: '12px', border: '1px solid rgba(0, 245, 160, 0.25)' }}>
+            <div style={{ backgroundColor: 'rgba(0, 198, 255, 0.12)', color: '#00C6FF', padding: '0.6rem', borderRadius: '12px', border: '1px solid rgba(0, 198, 255, 0.25)' }}>
               <FiTrendingUp size={20} />
             </div>
             <h3 className="font-heading" style={{ color: 'var(--color-text)', margin: 0, fontSize: '1.1rem' }}>VGV Total da Equipe</h3>
@@ -148,7 +148,7 @@ const GestorDashboard = () => {
             {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(vgvTotal)}
           </div>
           
-          <div style={{ fontSize: '0.8rem', color: '#00F5A0', display: 'flex', alignItems: 'center', gap: '0.3rem', fontWeight: 600 }}>
+          <div style={{ fontSize: '0.8rem', color: '#00C6FF', display: 'flex', alignItems: 'center', gap: '0.3rem', fontWeight: 600 }}>
             <FiTrendingUp /> +32% em relação ao mês passado (Simulado)
           </div>
         </div>
@@ -165,7 +165,7 @@ const GestorDashboard = () => {
             {Object.entries(funnelMap).map(([etapa, count]) => (
               <div key={etapa} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 1rem', borderRadius: '10px', background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,255,255,0.05)' }}>
                 <span style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>{etapaLabels[etapa] || etapa}</span>
-                <span style={{ background: 'rgba(0, 245, 160, 0.12)', color: '#00F5A0', padding: '4px 10px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700, border: '1px solid rgba(0, 245, 160, 0.25)' }}>
+                <span style={{ background: 'rgba(0, 198, 255, 0.12)', color: '#00C6FF', padding: '4px 10px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700, border: '1px solid rgba(0, 198, 255, 0.25)' }}>
                   {count} leads
                 </span>
               </div>
@@ -180,7 +180,7 @@ const GestorDashboard = () => {
       {/* Chart Section */}
       <div className="card" style={{ padding: '2rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-          <div style={{ backgroundColor: 'rgba(0, 245, 160, 0.12)', color: '#00F5A0', padding: '0.75rem', borderRadius: '12px', border: '1px solid rgba(0, 245, 160, 0.25)' }}>
+          <div style={{ backgroundColor: 'rgba(0, 198, 255, 0.12)', color: '#00C6FF', padding: '0.75rem', borderRadius: '12px', border: '1px solid rgba(0, 198, 255, 0.25)' }}>
             <FiPieChart size={22} />
           </div>
           <div>
@@ -194,8 +194,8 @@ const GestorDashboard = () => {
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorVgv" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#00F5A0" stopOpacity={0.4}/>
-                  <stop offset="95%" stopColor="#00F5A0" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="#00C6FF" stopOpacity={0.4}/>
+                  <stop offset="95%" stopColor="#00C6FF" stopOpacity={0}/>
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
@@ -208,7 +208,7 @@ const GestorDashboard = () => {
                 tickLine={false}
               />
               <Tooltip content={<CustomTooltip />} />
-              <Area type="monotone" dataKey="vgv" stroke="#00F5A0" strokeWidth={3} fillOpacity={1} fill="url(#colorVgv)" activeDot={{ r: 8, fill: '#00F5A0', stroke: '#08090A', strokeWidth: 4 }} />
+              <Area type="monotone" dataKey="vgv" stroke="#00C6FF" strokeWidth={3} fillOpacity={1} fill="url(#colorVgv)" activeDot={{ r: 8, fill: '#00C6FF', stroke: '#08090A', strokeWidth: 4 }} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -252,17 +252,17 @@ const GestorDashboard = () => {
                         <img 
                           src={corretor.avatar_url} 
                           alt={corretor.nome} 
-                          style={{ width: '34px', height: '34px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #00F5A0', flexShrink: 0 }} 
+                          style={{ width: '34px', height: '34px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #00C6FF', flexShrink: 0 }} 
                         />
                       ) : (
-                        <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'rgba(0,245,160,0.15)', color: '#00F5A0', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem', border: '1px solid rgba(0,245,160,0.3)', flexShrink: 0 }}>
+                        <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: 'rgba(0,198,255,0.15)', color: '#00C6FF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: '0.85rem', border: '1px solid rgba(0,198,255,0.3)', flexShrink: 0 }}>
                           {corretor.nome?.charAt(0)?.toUpperCase()}
                         </div>
                       )}
                       <span>{corretor.nome}</span>
                     </div>
                   </td>
-                  <td style={{ padding: '1rem 1.5rem', color: '#00F5A0', fontWeight: 700, fontSize: '1.1rem', textAlign: 'right' }}>
+                  <td style={{ padding: '1rem 1.5rem', color: '#00C6FF', fontWeight: 700, fontSize: '1.1rem', textAlign: 'right' }}>
                     {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(corretor.vgv || 0)}
                   </td>
                 </tr>

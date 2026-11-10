@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { 
   FiBell, FiBellOff, FiCheck, FiSend, FiSmartphone, FiShare, 
   FiPlusSquare, FiInfo, FiX, FiVolume2, FiDownload, FiMoreVertical, FiMenu 
@@ -217,7 +217,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
       }}>
         <div style={{
           backgroundColor: '#121418',
-          border: '1px solid rgba(0, 245, 160, 0.4)',
+          border: '1px solid rgba(0, 198, 255, 0.4)',
           borderRadius: '18px',
           maxWidth: '460px',
           width: '100%',
@@ -253,9 +253,9 @@ export default function PushNotificationManager({ mode = 'banner' }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
             <div style={{
               width: '44px', height: '44px', borderRadius: '12px',
-              backgroundColor: 'rgba(0, 245, 160, 0.15)',
+              backgroundColor: 'rgba(0, 198, 255, 0.15)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              color: '#00F5A0', flexShrink: 0
+              color: '#00C6FF', flexShrink: 0
             }}>
               <FiDownload size={22} />
             </div>
@@ -263,7 +263,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               <h3 style={{ margin: 0, fontSize: '1.15rem', color: '#fff', fontWeight: 700 }}>
                 Instalar Aplicativo no Celular
               </h3>
-              <span style={{ fontSize: '0.75rem', color: '#00F5A0', fontWeight: 600 }}>
+              <span style={{ fontSize: '0.75rem', color: '#00C6FF', fontWeight: 600 }}>
                 Acesso rápido na tela inicial sem digitar link
               </span>
             </div>
@@ -285,7 +285,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
                 padding: '8px 12px',
                 borderRadius: '8px',
                 border: 'none',
-                background: installTab === 'android' ? '#00F5A0' : 'transparent',
+                background: installTab === 'android' ? '#00C6FF' : 'transparent',
                 color: installTab === 'android' ? '#061912' : '#9ca3af',
                 fontWeight: 700,
                 fontSize: '0.85rem',
@@ -306,7 +306,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
                 padding: '8px 12px',
                 borderRadius: '8px',
                 border: 'none',
-                background: installTab === 'ios' ? '#00F5A0' : 'transparent',
+                background: installTab === 'ios' ? '#00C6FF' : 'transparent',
                 color: installTab === 'ios' ? '#061912' : '#9ca3af',
                 fontWeight: 700,
                 fontSize: '0.85rem',
@@ -331,7 +331,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
                   onClick={handleNativeAndroidInstall}
                   style={{
                     width: '100%',
-                    background: 'linear-gradient(135deg, #00F5A0, #00D284)',
+                    background: 'linear-gradient(135deg, #00C6FF, #0072FF)',
                     color: '#061912',
                     border: 'none',
                     borderRadius: '12px',
@@ -344,7 +344,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
                     justifyContent: 'center',
                     gap: '8px',
                     marginBottom: '16px',
-                    boxShadow: '0 4px 15px rgba(0, 245, 160, 0.3)'
+                    boxShadow: '0 4px 15px rgba(0, 198, 255, 0.3)'
                   }}
                 >
                   <FiDownload size={18} /> Instalar Aplicativo Agora (1 Toque)
@@ -357,21 +357,21 @@ export default function PushNotificationManager({ mode = 'banner' }) {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '18px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>1</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>1</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
                     Com o site aberto no Chrome, toque nos <strong>3 pontinhos (<FiMoreVertical style={{ verticalAlign: 'middle' }} />)</strong> no canto superior direito da tela.
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>2</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>2</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
-                    Role a lista e toque em <strong style={{ color: '#00F5A0' }}>"Instalar aplicativo"</strong> (ou "Adicionar à tela inicial").
+                    Role a lista e toque em <strong style={{ color: '#00C6FF' }}>"Instalar aplicativo"</strong> (ou "Adicionar à tela inicial").
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>3</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>3</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
                     Toque em <strong>"Instalar"</strong>. O ícone do <strong>Health & House CRM</strong> aparecerá na tela do celular como um aplicativo normal!
                   </div>
@@ -379,8 +379,8 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               </div>
 
               <div style={{
-                background: 'rgba(0, 245, 160, 0.08)',
-                border: '1px solid rgba(0, 245, 160, 0.25)',
+                background: 'rgba(0, 198, 255, 0.08)',
+                border: '1px solid rgba(0, 198, 255, 0.25)',
                 borderRadius: '10px',
                 padding: '10px 12px',
                 fontSize: '0.78rem',
@@ -401,21 +401,21 @@ export default function PushNotificationManager({ mode = 'banner' }) {
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '18px' }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>1</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>1</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
                     No <strong>Safari</strong>, toque no botão <strong>Compartilhar</strong> (ícone com quadrado e seta para cima <FiShare style={{ verticalAlign: 'middle', margin: '0 2px' }} /> na barra inferior).
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>2</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>2</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
-                    Role a lista para baixo e selecione <strong style={{ color: '#00F5A0' }}>"Adicionar à Tela de Início"</strong> <FiPlusSquare style={{ verticalAlign: 'middle', margin: '0 2px' }} />.
+                    Role a lista para baixo e selecione <strong style={{ color: '#00C6FF' }}>"Adicionar à Tela de Início"</strong> <FiPlusSquare style={{ verticalAlign: 'middle', margin: '0 2px' }} />.
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', background: 'rgba(255,255,255,0.03)', padding: '10px 12px', borderRadius: '10px' }}>
-                  <span style={{ background: '#00F5A0', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>3</span>
+                  <span style={{ background: '#00C6FF', color: '#061912', width: '22px', height: '22px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', fontWeight: 800, flexShrink: 0 }}>3</span>
                   <div style={{ fontSize: '0.825rem', color: '#fff' }}>
                     Abra o Health & House pelo novo ícone criado na tela do seu iPhone e ative as notificações!
                   </div>
@@ -453,7 +453,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               onClick={() => setShowInstallModal(false)}
               style={{
                 flex: 1,
-                background: 'linear-gradient(135deg, #00F5A0, #00D284)',
+                background: 'linear-gradient(135deg, #00C6FF, #0072FF)',
                 color: '#061912',
                 border: 'none',
                 borderRadius: '10px',
@@ -496,9 +496,9 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               : 'Toque para ativar notificações de novos leads'
           }
           style={{
-            background: isSubscribed ? 'rgba(0, 245, 160, 0.15)' : 'rgba(255, 87, 34, 0.18)',
-            border: `1px solid ${isSubscribed ? 'rgba(0, 245, 160, 0.4)' : 'rgba(255, 87, 34, 0.5)'}`,
-            color: isSubscribed ? '#00F5A0' : '#ff5722',
+            background: isSubscribed ? 'rgba(0, 198, 255, 0.15)' : 'rgba(255, 87, 34, 0.18)',
+            border: `1px solid ${isSubscribed ? 'rgba(0, 198, 255, 0.4)' : 'rgba(255, 87, 34, 0.5)'}`,
+            color: isSubscribed ? '#00C6FF' : '#ff5722',
             width: '32px',
             height: '32px',
             borderRadius: '50%',
@@ -546,9 +546,9 @@ export default function PushNotificationManager({ mode = 'banner' }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
               <div style={{
                 width: '46px', height: '46px', borderRadius: '12px',
-                backgroundColor: isSubscribed ? 'rgba(0, 245, 160, 0.15)' : 'rgba(255, 87, 34, 0.12)',
+                backgroundColor: isSubscribed ? 'rgba(0, 198, 255, 0.15)' : 'rgba(255, 87, 34, 0.12)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: isSubscribed ? 'var(--color-primary, #00F5A0)' : '#ff5722'
+                color: isSubscribed ? 'var(--color-primary, #00C6FF)' : '#ff5722'
               }}>
                 {isSubscribed ? <FiBell size={24} /> : <FiBellOff size={24} />}
               </div>
@@ -556,7 +556,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
                 <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: 700, color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   Notificações no Celular
                   {isSubscribed ? (
-                    <span style={{ color: '#00F5A0', fontSize: '0.75rem', background: 'rgba(0,245,160,0.15)', padding: '2px 8px', borderRadius: '12px', fontWeight: 600 }}>
+                    <span style={{ color: '#00C6FF', fontSize: '0.75rem', background: 'rgba(0,198,255,0.15)', padding: '2px 8px', borderRadius: '12px', fontWeight: 600 }}>
                       ● Ativo com Som
                     </span>
                   ) : (
@@ -630,8 +630,8 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               }}
               style={{
                 marginTop: '0.5rem',
-                backgroundColor: isAndroid ? 'rgba(0, 245, 160, 0.08)' : 'rgba(56, 189, 248, 0.08)',
-                border: `1px solid ${isAndroid ? 'rgba(0, 245, 160, 0.3)' : 'rgba(56, 189, 248, 0.3)'}`,
+                backgroundColor: isAndroid ? 'rgba(0, 198, 255, 0.08)' : 'rgba(56, 189, 248, 0.08)',
+                border: `1px solid ${isAndroid ? 'rgba(0, 198, 255, 0.3)' : 'rgba(56, 189, 248, 0.3)'}`,
                 borderRadius: '10px',
                 padding: '12px 14px',
                 display: 'flex',
@@ -642,7 +642,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <FiDownload size={18} color={isAndroid ? '#00F5A0' : '#38BDF8'} />
+                <FiDownload size={18} color={isAndroid ? '#00C6FF' : '#38BDF8'} />
                 <span style={{ fontSize: '0.825rem', color: '#e0f2fe' }}>
                   {isAndroid ? (
                     <><strong>Instalar no Android:</strong> Adicione o app à tela inicial para tela cheia e acesso instantâneo.</>
@@ -655,7 +655,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               </div>
               <span style={{ 
                 fontSize: '0.75rem', 
-                color: isAndroid ? '#00F5A0' : '#38BDF8', 
+                color: isAndroid ? '#00C6FF' : '#38BDF8', 
                 fontWeight: 700, 
                 whiteSpace: 'nowrap' 
               }}>
@@ -683,8 +683,8 @@ export default function PushNotificationManager({ mode = 'banner' }) {
         maxWidth: '480px',
         margin: '0 auto',
         backgroundColor: '#121418',
-        border: '1px solid rgba(0, 245, 160, 0.4)',
-        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.85), 0 0 15px rgba(0, 245, 160, 0.2)',
+        border: '1px solid rgba(0, 198, 255, 0.4)',
+        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.85), 0 0 15px rgba(0, 198, 255, 0.2)',
         borderRadius: '14px',
         padding: '12px 16px',
         display: 'flex',
@@ -699,8 +699,8 @@ export default function PushNotificationManager({ mode = 'banner' }) {
         >
           <div style={{
             width: '38px', height: '38px', borderRadius: '10px',
-            background: 'rgba(0, 245, 160, 0.15)',
-            color: '#00F5A0',
+            background: 'rgba(0, 198, 255, 0.15)',
+            color: '#00C6FF',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             flexShrink: 0
           }}>
@@ -721,7 +721,7 @@ export default function PushNotificationManager({ mode = 'banner' }) {
             onClick={isIOS && !isStandalone ? () => { setInstallTab('ios'); setShowInstallModal(true); } : handleSubscribe}
             disabled={loading}
             style={{
-              background: 'linear-gradient(135deg, #00F5A0, #00D284)',
+              background: 'linear-gradient(135deg, #00C6FF, #0072FF)',
               color: '#061912',
               fontWeight: 700,
               fontSize: '0.75rem',

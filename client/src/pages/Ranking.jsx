@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import api from '../services/api';
@@ -56,18 +56,18 @@ const Ranking = () => {
       
       <div style={{
         position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', width: '80%', height: '50vh', zIndex: -1, pointerEvents: 'none',
-        background: 'radial-gradient(ellipse at top, rgba(0, 245, 160, 0.12) 0%, transparent 70%)', filter: 'blur(50px)'
+        background: 'radial-gradient(ellipse at top, rgba(0, 198, 255, 0.12) 0%, transparent 70%)', filter: 'blur(50px)'
       }} />
 
       <div style={{ textAlign: 'center', marginTop: '1rem' }}>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', backgroundColor: 'rgba(0, 245, 160, 0.1)', color: '#00F5A0', padding: '0.4rem 1rem', borderRadius: '50px', border: '1px solid rgba(0, 245, 160, 0.25)', marginBottom: '0.75rem' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', backgroundColor: 'rgba(0, 198, 255, 0.1)', color: '#00C6FF', padding: '0.4rem 1rem', borderRadius: '50px', border: '1px solid rgba(0, 198, 255, 0.25)', marginBottom: '0.75rem' }}>
           <FiAward size={16} />
           <span style={{ fontWeight: 700, fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase' }}>Top Performers</span>
         </div>
         <h1 className="font-heading" style={{ fontSize: 'clamp(1.8rem, 7vw, 3rem)', margin: 0, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '-1px' }}>
-          Ranking <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(90deg, #00F5A0, #0EA5E9)', WebkitBackgroundClip: 'text' }}>Global</span>
+          Ranking <span style={{ color: 'transparent', backgroundImage: 'linear-gradient(90deg, #00C6FF, #0EA5E9)', WebkitBackgroundClip: 'text' }}>Global</span>
         </h1>
-        <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.25rem', fontSize: '0.9rem' }}>A corrida pelo topo de vendas de planos de sa�de deste mês.</p>
+        <p style={{ color: 'var(--color-text-secondary)', marginTop: '0.25rem', fontSize: '0.9rem' }}>A corrida pelo topo de vendas de planos de sa�de deste mês.</p>
       </div>
 
       <style>{`
@@ -165,7 +165,7 @@ const Ranking = () => {
         .list-item:hover {
           background: rgba(255,255,255,0.06);
           transform: translateX(5px);
-          border-color: rgba(0, 245, 160, 0.3);
+          border-color: rgba(0, 198, 255, 0.3);
         }
       `}</style>
 
@@ -194,18 +194,18 @@ const Ranking = () => {
           {/* 1st Place */}
           {top3[0] && (
             <div className="podium-item" style={{ zIndex: 3 }}>
-              <FaCrown size={45} color="#00F5A0" style={{ position: 'absolute', top: '-55px', filter: 'drop-shadow(0 4px 15px rgba(0,245,160,0.8))' }} />
-              <div className="podium-avatar" style={{ borderColor: '#00F5A0', width: '104px', height: '104px', fontSize: '2.5rem', marginBottom: '-20px', boxShadow: '0 0 35px rgba(0,245,160,0.4)' }}>
+              <FaCrown size={45} color="#00C6FF" style={{ position: 'absolute', top: '-55px', filter: 'drop-shadow(0 4px 15px rgba(0,198,255,0.8))' }} />
+              <div className="podium-avatar" style={{ borderColor: '#00C6FF', width: '104px', height: '104px', fontSize: '2.5rem', marginBottom: '-20px', boxShadow: '0 0 35px rgba(0,198,255,0.4)' }}>
                 {top3[0].avatar_url ? (
                   <img src={top3[0].avatar_url} alt={top3[0].nome} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
-                  <span style={{ color: '#00F5A0' }}>{top3[0].nome.charAt(0).toUpperCase()}</span>
+                  <span style={{ color: '#00C6FF' }}>{top3[0].nome.charAt(0).toUpperCase()}</span>
                 )}
               </div>
-              <div className="podium-base" style={{ height: '250px', background: 'rgba(0,245,160,0.08)', borderColor: 'rgba(0,245,160,0.3)', boxShadow: '0 0 60px rgba(0,245,160,0.2)' }}>
-                <span style={{ fontWeight: 800, textAlign: 'center', fontSize: '1.3rem', zIndex: 2, color: '#00F5A0' }}>{top3[0].nome.split(' ')[0]}</span>
+              <div className="podium-base" style={{ height: '250px', background: 'rgba(0,198,255,0.08)', borderColor: 'rgba(0,198,255,0.3)', boxShadow: '0 0 60px rgba(0,198,255,0.2)' }}>
+                <span style={{ fontWeight: 800, textAlign: 'center', fontSize: '1.3rem', zIndex: 2, color: '#00C6FF' }}>{top3[0].nome.split(' ')[0]}</span>
                 <span style={{ color: '#fff', fontWeight: 800, marginTop: '0.25rem', zIndex: 2, fontSize: '1.2rem' }}>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(top3[0].vgv)}</span>
-                <span className="rank-number" style={{ color: 'rgba(0,245,160,0.2)', fontSize: '6rem' }}>1</span>
+                <span className="rank-number" style={{ color: 'rgba(0,198,255,0.2)', fontSize: '6rem' }}>1</span>
               </div>
             </div>
           )}
@@ -234,11 +234,11 @@ const Ranking = () => {
       {/* List for the rest */}
       <div style={{ maxWidth: '650px', width: '100%', margin: '0 auto' }}>
         {others.map((corretor, index) => (
-          <div key={corretor.id} className="list-item" style={{ borderLeft: user?.id === corretor.id ? '4px solid #00F5A0' : '1px solid rgba(255,255,255,0.05)' }}>
+          <div key={corretor.id} className="list-item" style={{ borderLeft: user?.id === corretor.id ? '4px solid #00C6FF' : '1px solid rgba(255,255,255,0.05)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <span style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-tertiary)', width: '30px', textAlign: 'center' }}>{index + 4}º</span>
               
-              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(0,245,160,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: '#00F5A0', overflow: 'hidden', border: '1.5px solid rgba(0,245,160,0.3)', flexShrink: 0 }}>
+              <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(0,198,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: '#00C6FF', overflow: 'hidden', border: '1.5px solid rgba(0,198,255,0.3)', flexShrink: 0 }}>
                 {corretor.avatar_url ? (
                   <img src={corretor.avatar_url} alt={corretor.nome} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 ) : (
@@ -247,12 +247,12 @@ const Ranking = () => {
               </div>
 
               <span style={{ fontWeight: 600, fontSize: '1.05rem', color: '#FFFFFF' }}>
-                {corretor.nome} {user?.id === corretor.id && <span style={{ fontSize: '0.75rem', backgroundColor: 'rgba(0,245,160,0.15)', color: '#00F5A0', padding: '2px 8px', borderRadius: '20px', marginLeft: '8px', fontWeight: 700 }}>Você</span>}
+                {corretor.nome} {user?.id === corretor.id && <span style={{ fontSize: '0.75rem', backgroundColor: 'rgba(0,198,255,0.15)', color: '#00C6FF', padding: '2px 8px', borderRadius: '20px', marginLeft: '8px', fontWeight: 700 }}>Você</span>}
               </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <FiTrendingUp color="#00F5A0" />
-              <span style={{ fontWeight: 800, fontFamily: 'monospace', fontSize: '1.15rem', color: '#00F5A0' }}>
+              <FiTrendingUp color="#00C6FF" />
+              <span style={{ fontWeight: 800, fontFamily: 'monospace', fontSize: '1.15rem', color: '#00C6FF' }}>
                 {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(corretor.vgv)}
               </span>
             </div>

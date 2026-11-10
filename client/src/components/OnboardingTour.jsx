@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FiCheck, FiArrowRight, FiTarget, FiStar, FiMap, FiX, FiAward } from 'react-icons/fi';
@@ -232,7 +232,7 @@ export default function OnboardingTour({ isOpen, onClose }) {
         backgroundColor: 'var(--color-surface, #231E1B)',
         border: '1px solid var(--color-primary, #d4956a)',
         borderRadius: '16px',
-        boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 25px rgba(0, 245, 160, 0.25)',
+        boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 25px rgba(0, 198, 255, 0.25)',
         overflow: 'hidden',
         animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)'
       }}>
@@ -241,7 +241,7 @@ export default function OnboardingTour({ isOpen, onClose }) {
             @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
             @keyframes pulseText { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }
             .tour-spotlight {
-              box-shadow: 0 0 0 4px rgba(0, 245, 160, 0.5), 0 0 25px rgba(0, 245, 160, 0.7) !important;
+              box-shadow: 0 0 0 4px rgba(0, 198, 255, 0.5), 0 0 25px rgba(0, 198, 255, 0.7) !important;
               border-radius: 8px !important;
               transition: all 0.3s ease;
             }
@@ -263,7 +263,7 @@ export default function OnboardingTour({ isOpen, onClose }) {
           <div style={{ display: 'flex', gap: '16px', marginBottom: '16px' }}>
             <div style={{ 
               width: '48px', height: '48px', borderRadius: '12px', flexShrink: 0,
-              backgroundColor: 'rgba(0, 245, 160, 0.12)', 
+              backgroundColor: 'rgba(0, 198, 255, 0.12)', 
               display: 'flex', alignItems: 'center', justifyContent: 'center'
             }}>
               {step.icon}
