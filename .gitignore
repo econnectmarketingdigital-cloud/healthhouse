@@ -1,0 +1,13 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+client/dist/
+dist/
+.env
+client/.env
+server/.env
+*.env
+.DS_Store
+*.db
+crm_local.sqlite
+*.log

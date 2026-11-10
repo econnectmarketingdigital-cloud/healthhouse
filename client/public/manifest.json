@@ -1,0 +1,24 @@
+{
+  "short_name": "Health & House",
+  "name": "Health & House CRM",
+  "icons": [
+    {
+      "src": "/logo_icon.png?v=7",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo_icon.png?v=7",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#080c14",
+  "theme_color": "#00C6FF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "CRM e Gestão de Planos de Saúde — Health & House Saúde e Bem Estar"
+}
