@@ -211,11 +211,11 @@ const Kanban = () => {
       </div>
       
       <DragDropContext onDragEnd={onDragEnd}>
-        <div data-tour="kanban-board" style={{ display: 'flex', gap: '1rem', overflowX: 'auto', overflowY: 'hidden', paddingBottom: '1rem', height: 'calc(100vh - 150px)' }}>
+        <div data-tour="kanban-board" className="kanban-wrapper" style={{ width: '100%', paddingBottom: '1rem' }}>
           {columns.map(col => {
             const colLeads = getLeadsByEtapa(col.id);
             return (
-              <div key={col.id} style={{ minWidth: '260px', flex: '1', display: 'flex', flexDirection: 'column' }}>
+              <div key={col.id} className="kanban-column" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem', padding: '0.5rem 0.75rem', background: 'var(--color-surface)', borderRadius: '8px' }}>
                   <span style={{ fontWeight: 600, fontSize: '0.875rem', color: 'var(--color-text)' }}>{col.title}</span>
                   <span className="badge" style={{ background: 'var(--color-primary-soft)', color: 'var(--color-primary)' }}>{colLeads.length}</span>

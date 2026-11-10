@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import { useNavigate } from 'react-router-dom';
@@ -51,7 +51,7 @@ const Dashboard = () => {
       
       {/* Background Dots Texture */}
       <div style={{
-        position: 'absolute', top: '-2rem', left: '-2rem', right: '-2rem', bottom: '-2rem', zIndex: -1, pointerEvents: 'none',
+        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, pointerEvents: 'none',
         backgroundImage: 'radial-gradient(rgba(0,198,255,0.1) 1px, transparent 1px)', backgroundSize: '30px 30px', opacity: 0.6
       }} />
 
@@ -189,7 +189,7 @@ const Dashboard = () => {
       </div>
 
       {/* Recent Leads */}
-      <div className="card" style={{ padding: '0' }}>
+      <div className="card" style={{ padding: '0', overflow: 'hidden' }}>
         <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div style={{ backgroundColor: 'rgba(56,189,248,0.15)', color: '#38BDF8', padding: '0.5rem', borderRadius: '8px', border: '1px solid rgba(56,189,248,0.3)' }}>
             <FiClock size={18} />

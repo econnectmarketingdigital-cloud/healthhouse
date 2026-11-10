@@ -68,19 +68,19 @@ const Layout = () => {
 
       {/* Mobile Top Header */}
       <header className="mobile-header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }} onClick={() => navigate('/')}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '7px', cursor: 'pointer', minWidth: 0, flexShrink: 1 }} onClick={() => navigate('/')}>
           <img 
             src="/logo_icon.png?v=7" 
             alt="Health & House" 
-            style={{ width: '34px', height: '34px', borderRadius: '50%', objectFit: 'contain', background: 'rgba(0, 198, 255, 0.08)', border: '1px solid rgba(0, 198, 255, 0.4)' }} 
+            style={{ width: '30px', height: '30px', borderRadius: '50%', objectFit: 'contain', background: 'rgba(0, 198, 255, 0.08)', border: '1px solid rgba(0, 198, 255, 0.4)', flexShrink: 0 }} 
           />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, color: '#fff', lineHeight: 1.1 }}>Health & House</span>
-            <span style={{ fontSize: '0.6rem', color: '#00C6FF', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 700 }}>Saúde & Bem Estar</span>
+          <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+            <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#fff', lineHeight: 1.1, whiteSpace: 'nowrap' }}>Health & House</span>
+            <span className="mobile-brand-subtitle" style={{ fontSize: '0.55rem', color: '#00C6FF', letterSpacing: '0.8px', textTransform: 'uppercase', fontWeight: 700, whiteSpace: 'nowrap' }}>Saúde & Bem Estar</span>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '5px', flexShrink: 0 }}>
           {/* Status Rodízio Toggle */}
           <button
             onClick={handleToggleOnline}
@@ -88,14 +88,16 @@ const Layout = () => {
               background: isOnline ? 'rgba(16, 185, 129, 0.15)' : 'rgba(239, 68, 68, 0.15)',
               border: `1px solid ${isOnline ? 'rgba(16, 185, 129, 0.4)' : 'rgba(239, 68, 68, 0.4)'}`,
               borderRadius: '20px',
-              padding: '3px 8px',
+              padding: '3px 6px',
               color: isOnline ? '#10b981' : '#ef4444',
-              fontSize: '0.68rem',
+              fontSize: '0.64rem',
               fontWeight: 700,
               display: 'flex',
               alignItems: 'center',
               gap: '4px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              flexShrink: 0
             }}
           >
             <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: isOnline ? '#10b981' : '#ef4444' }} />
@@ -111,8 +113,8 @@ const Layout = () => {
             style={{
               background: 'linear-gradient(135deg, #00C6FF, #0072FF)',
               color: '#FFFFFF',
-              width: '32px',
-              height: '32px',
+              width: '30px',
+              height: '30px',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -120,23 +122,24 @@ const Layout = () => {
               fontWeight: 800,
               border: 'none',
               cursor: 'pointer',
-              boxShadow: '0 0 12px rgba(0, 198, 255, 0.35)'
+              boxShadow: '0 0 12px rgba(0, 198, 255, 0.35)',
+              flexShrink: 0
             }}
             title="Novo Lead"
           >
-            <HiPlus size={18} />
+            <HiPlus size={16} />
           </button>
 
           {/* Avatar / Link Perfil */}
-          <div onClick={() => navigate('/perfil')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+          <div onClick={() => navigate('/perfil')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             {user?.avatar_url ? (
               <img 
                 src={user.avatar_url} 
                 alt={user.nome} 
-                style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #00C6FF' }} 
+                style={{ width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover', border: '2px solid #00C6FF' }} 
               />
             ) : (
-              <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(0, 198, 255, 0.2)', color: '#00C6FF', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.8rem', border: '1px solid rgba(0, 198, 255, 0.4)' }}>
+              <div style={{ width: '30px', height: '30px', borderRadius: '50%', background: 'rgba(0, 198, 255, 0.2)', color: '#00C6FF', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.75rem', border: '1px solid rgba(0, 198, 255, 0.4)' }}>
                 {user?.nome?.charAt(0)?.toUpperCase() || 'U'}
               </div>
             )}

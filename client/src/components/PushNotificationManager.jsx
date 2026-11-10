@@ -237,8 +237,8 @@ export default function PushNotificationManager({ mode = 'banner' }) {
               background: 'rgba(255,255,255,0.08)',
               border: 'none',
               borderRadius: '50%',
-              width: '32px',
-              height: '32px',
+              width: '30px',
+            height: '30px',
               color: '#fff',
               display: 'flex',
               alignItems: 'center',
@@ -499,15 +499,16 @@ export default function PushNotificationManager({ mode = 'banner' }) {
             background: isSubscribed ? 'rgba(0, 198, 255, 0.15)' : 'rgba(255, 87, 34, 0.18)',
             border: `1px solid ${isSubscribed ? 'rgba(0, 198, 255, 0.4)' : 'rgba(255, 87, 34, 0.5)'}`,
             color: isSubscribed ? '#00C6FF' : '#ff5722',
-            width: '32px',
-            height: '32px',
+            width: '30px',
+            height: '30px',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
             position: 'relative',
-            padding: 0
+            padding: 0,
+            flexShrink: 0
           }}
         >
           <FiBell size={16} />

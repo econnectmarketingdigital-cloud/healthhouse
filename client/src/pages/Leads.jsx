@@ -187,21 +187,28 @@ export default function Leads() {
         </button>
       </div>
 
-      <div style={{ display: 'flex', gap: '15px', marginBottom: '20px', flexWrap: 'wrap' }}>
-        <div style={{ flex: '1 1 300px', position: 'relative' }}>
-          <FiSearch style={{ position: 'absolute', left: '10px', top: '10px', color: '#999' }} />
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px', flexWrap: 'wrap' }}>
+        <div style={{ flex: '1 1 240px', minWidth: 0, position: 'relative' }}>
+          <FiSearch style={{ position: 'absolute', left: '12px', top: '12px', color: 'var(--color-text-tertiary)' }} />
           <input 
             type="text" 
             placeholder="Buscar por nome, telefone ou email..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: '100%', padding: '8px 8px 8px 35px', borderRadius: '4px', border: '1px solid #ddd' }}
+            style={{ 
+              width: '100%', padding: '10px 12px 10px 38px', borderRadius: '8px', 
+              border: '1px solid var(--color-border)', backgroundColor: 'var(--color-surface)',
+              color: 'var(--color-text)', boxSizing: 'border-box'
+            }}
           />
         </div>
         <select 
           value={etapaFilter} 
           onChange={(e) => setEtapaFilter(e.target.value)}
-          style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
+          style={{ 
+            padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--color-border)',
+            backgroundColor: 'var(--color-surface)', color: 'var(--color-text)', minWidth: 0, flex: '1 1 auto'
+          }}
         >
           <option value="">Todas as Etapas</option>
           {ETAPAS_FUNIL.map(e => (
@@ -211,7 +218,10 @@ export default function Leads() {
         <select 
           value={origemFilter} 
           onChange={(e) => setOrigemFilter(e.target.value)}
-          style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
+          style={{ 
+            padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--color-border)',
+            backgroundColor: 'var(--color-surface)', color: 'var(--color-text)', minWidth: 0, flex: '1 1 auto'
+          }}
         >
           <option value="">Todas as Origens</option>
           <option value="meta_ads">Meta Ads</option>
@@ -222,7 +232,10 @@ export default function Leads() {
           <select 
             value={corretorFilter} 
             onChange={(e) => setCorretorFilter(e.target.value)}
-            style={{ padding: '8px', borderRadius: '4px', border: '1px solid #ddd', fontWeight: 500 }}
+            style={{ 
+              padding: '10px 12px', borderRadius: '8px', border: '1px solid var(--color-border)',
+              backgroundColor: 'var(--color-surface)', color: 'var(--color-text)', minWidth: 0, flex: '1 1 auto', fontWeight: 500 
+            }}
           >
             <option value="">Todos os Corretores</option>
             <option value={user?.id}>Meus Leads (Você)</option>
@@ -237,9 +250,10 @@ export default function Leads() {
           value={produtoFilter} 
           onChange={(e) => setProdutoFilter(e.target.value)}
           style={{ 
-            padding: '8px', borderRadius: '4px', border: '1px solid #ddd', fontWeight: 600,
-            backgroundColor: produtoFilter ? 'rgba(0, 198, 255, 0.15)' : 'transparent',
-            color: produtoFilter ? '#00C6FF' : 'inherit'
+            padding: '10px 12px', borderRadius: '8px', border: `1px solid ${produtoFilter ? '#00C6FF' : 'var(--color-border)'}`,
+            fontWeight: 600, minWidth: 0, flex: '1 1 auto',
+            backgroundColor: produtoFilter ? 'rgba(0, 198, 255, 0.15)' : 'var(--color-surface)',
+            color: produtoFilter ? '#00C6FF' : 'var(--color-text)'
           }}
         >
           <option value="">Todas as Operadoras</option>

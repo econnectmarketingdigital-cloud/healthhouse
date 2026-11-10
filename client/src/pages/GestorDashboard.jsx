@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useToast } from '../contexts/ToastContext';
 import { useNavigate } from 'react-router-dom';
 import api from '../services/api';
@@ -215,7 +215,7 @@ const GestorDashboard = () => {
       </div>
 
       {/* Ranking List */}
-      <div className="card" style={{ padding: 0 }}>
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div style={{ backgroundColor: 'rgba(123,168,196,0.15)', color: '#7BA8C4', padding: '0.75rem', borderRadius: '12px', border: '1px solid rgba(123,168,196,0.3)' }}>
             <FiUsers size={22} />
