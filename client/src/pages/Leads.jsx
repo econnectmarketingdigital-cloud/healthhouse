@@ -3,8 +3,8 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import api from '../services/api';
 import { useToast } from '../contexts/ToastContext';
 import { useAuth } from '../contexts/AuthContext';
-import { FiPlus, FiSearch, FiFilter } from 'react-icons/fi';
-import { getCampanhaBadge, getEtapaColor, getEtapaLabel, ETAPAS_FUNIL } from '../lib/utils';
+import { FiPlus, FiSearch, FiFilter, FiMessageCircle } from 'react-icons/fi';
+import { getCampanhaBadge, getEtapaColor, getEtapaLabel, ETAPAS_FUNIL, getWhatsAppUrl } from '../lib/utils';
 
 const getOrigemColor = (origem) => {
   const colors = {
@@ -386,7 +386,36 @@ export default function Leads() {
                         )}
                       </div>
                     </td>
-                    <td>{lead.telefone}</td>
+                    <td>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span>{lead.telefone}</span>
+                        {lead.telefone && (
+                          <a 
+                            href={getWhatsAppUrl(lead.telefone)} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                              backgroundColor: 'rgba(37, 211, 102, 0.15)',
+                              color: '#25D366',
+                              border: '1px solid rgba(37, 211, 102, 0.35)',
+                              padding: '2px 8px',
+                              borderRadius: '6px',
+                              fontSize: '0.75rem',
+                              fontWeight: 700,
+                              textDecoration: 'none'
+                            }}
+                            title="Conversar no WhatsApp"
+                          >
+                            <FiMessageCircle size={13} />
+                            WhatsApp
+                          </a>
+                        )}
+                      </div>
+                    </td>
                     <td style={{ fontSize: '0.85rem', color: lead.corretor_nome ? 'var(--color-text)' : 'var(--color-text-tertiary)' }}>
                       {lead.corretor_nome || 'Sem corretor'}
                     </td>

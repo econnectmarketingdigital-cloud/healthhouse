@@ -293,9 +293,14 @@ const Kanban = () => {
                                   </div>
                                 )}
 
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
-                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                                    <h4 style={{ fontWeight: 600, fontSize: '0.875rem', color: 'var(--color-text)', margin: 0 }}>{lead.nome}</h4>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.4rem' }}>
+                                  <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                                    <h4 style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--color-text)', margin: 0 }}>{lead.nome}</h4>
+                                    {lead.telefone && (
+                                      <span style={{ fontSize: '0.76rem', color: 'var(--color-text-secondary)', fontWeight: 500 }}>
+                                        {lead.telefone}
+                                      </span>
+                                    )}
                                     {lead.reengajado && (
                                       <span style={{ 
                                         alignSelf: 'flex-start',
@@ -308,7 +313,8 @@ const Kanban = () => {
                                         borderRadius: '4px',
                                         display: 'inline-flex',
                                         alignItems: 'center',
-                                        gap: '3px'
+                                        gap: '3px',
+                                        marginTop: '2px'
                                       }}>
                                         🔥 Preencheu de novo
                                       </span>
@@ -318,6 +324,20 @@ const Kanban = () => {
                                     {originLabel(lead.origem)}
                                   </span>
                                 </div>
+
+                                {lead.observacoes && (lead.observacoes.includes('Resposta: SIM') || lead.observacoes.includes('Resposta: NÃO')) && (
+                                  <div style={{ marginBottom: '0.4rem' }}>
+                                    {lead.observacoes.includes('Resposta: SIM') ? (
+                                      <span style={{ fontSize: '0.68rem', fontWeight: 700, padding: '2px 6px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.15)', color: '#10B981', border: '1px solid rgba(16, 185, 129, 0.35)', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                                        ✓ Possui Select: SIM
+                                      </span>
+                                    ) : (
+                                      <span style={{ fontSize: '0.68rem', fontWeight: 700, padding: '2px 6px', borderRadius: '4px', background: 'rgba(239, 68, 68, 0.15)', color: '#EF4444', border: '1px solid rgba(239, 68, 68, 0.35)', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                                        ✕ Possui Select: NÃO
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
                                 
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '0 0 0.5rem 0' }}>
                                   {lead.empreendimento_nome && !campBadge ? (
@@ -326,8 +346,8 @@ const Kanban = () => {
                                     </p>
                                   ) : <span />}
                                   {lead.corretor_nome && (
-                                    <span style={{ fontSize: '0.7rem', color: 'var(--color-primary)', background: 'var(--color-primary-soft)', padding: '2px 6px', borderRadius: '4px', fontWeight: 500 }}>
-                                      {lead.corretor_nome}
+                                    <span style={{ fontSize: '0.7rem', color: 'var(--color-primary)', background: 'var(--color-primary-soft)', padding: '2px 6px', borderRadius: '4px', fontWeight: 600 }}>
+                                      👤 {lead.corretor_nome}
                                     </span>
                                   )}
                                 </div>
@@ -337,18 +357,30 @@ const Kanban = () => {
                                   <FiClock size={12} />
                                   <span>{formatTimeSince(lead.reengajado_em || lead.ultimo_contato || lead.created_at)}</span>
                                 </div>
-                                <div style={{ display: 'flex', gap: '4px' }}>
+                                <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
                                   {lead.telefone && (
-                                    <a href={getWhatsAppUrl(lead.telefone)} target="_blank" rel="noreferrer"
-                                       onClick={e => e.stopPropagation()} 
-                                       style={{ color: 'var(--color-success)', padding: '2px' }}>
-                                      <FiMessageCircle size={14} />
-                                    </a>
-                                  )}
-                                  {lead.telefone && (
-                                    <a href={`tel:${lead.telefone}`} onClick={e => e.stopPropagation()}
-                                       style={{ color: 'var(--color-info)', padding: '2px' }}>
-                                      <FiPhone size={14} />
+                                    <a 
+                                      href={getWhatsAppUrl(lead.telefone)} 
+                                      target="_blank" 
+                                      rel="noreferrer"
+                                      onClick={e => e.stopPropagation()} 
+                                      style={{ 
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '4px',
+                                        backgroundColor: 'rgba(37, 211, 102, 0.18)',
+                                        color: '#25D366',
+                                        border: '1px solid rgba(37, 211, 102, 0.4)',
+                                        padding: '3px 8px',
+                                        borderRadius: '6px',
+                                        fontSize: '0.72rem',
+                                        fontWeight: 700,
+                                        textDecoration: 'none'
+                                      }}
+                                      title="Abrir WhatsApp"
+                                    >
+                                      <FiMessageCircle size={13} />
+                                      WhatsApp
                                     </a>
                                   )}
                                 </div>
